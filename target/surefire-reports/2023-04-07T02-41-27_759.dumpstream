@@ -1,5 +1,0 @@
-# Created at 2023-04-07T02:41:28.144
-Boot Manifest-JAR contains absolute paths in classpath 'D:\Diego\Projects\Endava Challenges\appium-automation-framework-imdb\target\test-classes'
-Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
-'other' has different root
-

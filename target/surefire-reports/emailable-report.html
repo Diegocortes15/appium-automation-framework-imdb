@@ -9,28 +9,28 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">regression</th></tr>
-<tr><td><a href="#t0">TestStory: AM_0001 - ANDROID</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">37,208</td><td></td><td></td></tr>
-<tr class="stripe"><td><a href="#t1">TestStory: AM_0003 - ANDROID</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">73,688</td><td></td><td></td></tr>
-<tr><td><a href="#t2">TestStory: AM_0005 - ANDROID</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">80,209</td><td></td><td></td></tr>
-<tr><th>Total</th><th class="num">2</th><th class="num">0</th><th class="num">0</th><th class="num attn">1</th><th class="num">191,105</th><th colspan="2"></th></tr>
+<tr><td><a href="#t0">TestStory: AM_0001 - ANDROID</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">44,274</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t1">TestStory: AM_0003 - ANDROID</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">32,794</td><td></td><td></td></tr>
+<tr><td><a href="#t2">TestStory: AM_0005 - ANDROID</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">82,626</td><td></td><td></td></tr>
+<tr><th>Total</th><th class="num">2</th><th class="num">0</th><th class="num">0</th><th class="num attn">1</th><th class="num">159,694</th><th colspan="2"></th></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">regression</th></tr></tbody><tbody id="t0"><tr><th colspan="4">TestStory: AM_0001 - ANDROID &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">specs.AM_0001</td><td><a href="#m0">am_0002</a></td><td rowspan="1">1680853300817</td><td rowspan="1">26606</td></tr></tbody>
-<tbody id="t1"><tr><th colspan="4">TestStory: AM_0003 - ANDROID &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">specs.AM_0003</td><td><a href="#m1">am_0004</a></td><td rowspan="1">1680853334640</td><td rowspan="1">66428</td></tr></tbody>
-<tbody id="t2"><tr><th colspan="4">TestStory: AM_0005 - ANDROID &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">specs.AM_0005</td><td><a href="#m2">am_0006</a></td><td rowspan="1">1680853408388</td><td rowspan="1">72955</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">regression</th></tr></tbody><tbody id="t0"><tr><th colspan="4">TestStory: AM_0001 - ANDROID &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">specs.AM_0001</td><td><a href="#m0">am_0002</a></td><td rowspan="1">1680898709221</td><td rowspan="1">23956</td></tr></tbody>
+<tbody id="t1"><tr><th colspan="4">TestStory: AM_0003 - ANDROID &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">specs.AM_0003</td><td><a href="#m1">am_0004</a></td><td rowspan="1">1680898740629</td><td rowspan="1">25375</td></tr></tbody>
+<tbody id="t2"><tr><th colspan="4">TestStory: AM_0005 - ANDROID &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">specs.AM_0005</td><td><a href="#m2">am_0006</a></td><td rowspan="1">1680898773504</td><td rowspan="1">74104</td></tr></tbody>
 </table>
 <h2>TestStory: AM_0001 - ANDROID</h2><h3 id="m0">specs.AM_0001#am_0002</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>TestStory: AM_0003 - ANDROID</h2><h3 id="m1">specs.AM_0003#am_0004</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by AppiumBy.androidUIAutomator: new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().resourceId(&quot;com.imdb.mobile:id/your_watchlist_widget&quot;).childSelector(new UiSelector().resourceId(&quot;com.imdb.mobile:id/recycler_view&quot;)).childSelector(new UiSelector().className(&quot;android.widget.FrameLayout&quot;).instance(0)).childSelector(new UiSelector().resourceId(&quot;com.imdb.mobile:id/watchlist_ribbon&quot;))) (tried for 20 second(s) with 500 milliseconds interval)
+<h2>TestStory: AM_0003 - ANDROID</h2><h3 id="m1">specs.AM_0003#am_0004</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by AppiumBy.androidUIAutomator: new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().className(&quot;androidx.recyclerview.widget.RecyclerView&quot;).childSelector(new UiSelector().className(&quot;android.widget.LinearLayout&quot;).childSelector(new UiSelector().className(&quot;android.widget.ImageView&quot;).fromParent(new UiSelector().className(&quot;android.widget.LinearLayout&quot;))))) (tried for 20 second(s) with 500 milliseconds interval)
 Build info: version: &apos;4.8.3&apos;, revision: &apos;e5e76298c3&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.18&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
 Capabilities {appium:appActivity: com.imdb.mobile.HomeActivity, appium:appPackage: com.imdb.mobile, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {appActivity: com.imdb.mobile.HomeActivity, appPackage: com.imdb.mobile, automationName: UiAutomator2, deviceName: 3200e957c09dc553, platformName: android}, appium:deviceApiLevel: 30, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone_x86, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x1920, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.625, appium:platformVersion: 11, appium:statBarHeight: 63, appium:takesScreenshot: true, appium:viewportRect: {height: 1731, left: 0, top: 63, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: 0fb03953-b5d6-4a26-8f03-9fe0a7656c59
+Session ID: c7f2a404-b407-4a1d-8f13-81b47fa26bee
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
 	at core.AppiumFactory.getElement(AppiumFactory.java:48)
 	at core.AppiumFactory.click(AppiumFactory.java:76)
-	at screens.ProfileScreen.removeMovieFromWatchlist(ProfileScreen.java:31)
-	at specs.AM_0003.am_0004(AM_0003.java:32)
+	at screens.SearchScreen.searchMovie(SearchScreen.java:26)
+	at specs.AM_0003.am_0004(AM_0003.java:27)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
 ... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h2>TestStory: AM_0005 - ANDROID</h2><h3 id="m2">specs.AM_0005#am_0006</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
