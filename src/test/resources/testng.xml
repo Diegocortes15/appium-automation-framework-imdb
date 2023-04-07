@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="regression" parallel="none" verbose="1">
+
+    <test name="TestStory: AM_0001 - ANDROID">
+        <classes>
+            <class name="specs.AM_0001"/>
+        </classes>
+    </test>
+
+    <test name="TestStory: AM_0003 - ANDROID">
+        <classes>
+            <class name="specs.AM_0003"/>
+        </classes>
+    </test>
+
+    <test name="TestStory: AM_0005 - ANDROID">
+        <classes>
+            <class name="specs.AM_0005"/>
+        </classes>
+    </test>
+
+</suite>

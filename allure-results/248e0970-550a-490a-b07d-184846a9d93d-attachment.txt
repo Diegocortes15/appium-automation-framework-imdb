@@ -1,0 +1,1 @@
+✅ Personal user rating text is displayed as Expected = 8 ; Actual = 8

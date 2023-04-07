@@ -1,0 +1,1 @@
+✅ Movie Title In Wish List text is displayed as Expected = The Passengers of the Night ; Actual = The Passengers of the Night

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="2" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-04-07T02:41:30 COT" name="regression" finished-at="2023-04-07T02:44:41 COT" duration-ms="191151">
+    <groups>
+    </groups>
+    <test started-at="2023-04-07T02:41:30 COT" name="TestStory: AM_0001 - ANDROID" finished-at="2023-04-07T02:42:07 COT" duration-ms="37208">
+      <class name="specs.AM_0001">
+        <test-method is-config="true" signature="SetUp()[pri:0, instance:specs.AM_0001@50f40653]" started-at="2023-04-07T02:41:30 COT" name="SetUp" finished-at="2023-04-07T02:41:40 COT" duration-ms="9968" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SetUp -->
+        <test-method signature="am_0002()[pri:0, instance:specs.AM_0001@50f40653]" started-at="2023-04-07T02:41:40 COT" name="am_0002" finished-at="2023-04-07T02:42:07 COT" duration-ms="26606" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- am_0002 -->
+        <test-method is-config="true" signature="TearDown()[pri:0, instance:specs.AM_0001@50f40653]" started-at="2023-04-07T02:42:07 COT" name="TearDown" finished-at="2023-04-07T02:42:07 COT" duration-ms="401" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+      </class> <!-- specs.AM_0001 -->
+    </test> <!-- TestStory: AM_0001 - ANDROID -->
+    <test started-at="2023-04-07T02:42:07 COT" name="TestStory: AM_0003 - ANDROID" finished-at="2023-04-07T02:43:21 COT" duration-ms="73688">
+      <class name="specs.AM_0003">
+        <test-method is-config="true" signature="SetUp()[pri:0, instance:specs.AM_0003@3f4b840d]" started-at="2023-04-07T02:42:07 COT" name="SetUp" finished-at="2023-04-07T02:42:14 COT" duration-ms="6771" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SetUp -->
+        <test-method signature="am_0004()[pri:0, instance:specs.AM_0003@3f4b840d]" started-at="2023-04-07T02:42:14 COT" name="am_0004" finished-at="2023-04-07T02:43:21 COT" duration-ms="66428" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of element located by AppiumBy.androidUIAutomator: new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().resourceId("com.imdb.mobile:id/your_watchlist_widget").childSelector(new UiSelector().resourceId("com.imdb.mobile:id/recycler_view")).childSelector(new UiSelector().className("android.widget.FrameLayout").instance(0)).childSelector(new UiSelector().resourceId("com.imdb.mobile:id/watchlist_ribbon"))) (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '4.8.3', revision: 'e5e76298c3'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.18'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appium:appActivity: com.imdb.mobile.HomeActivity, appium:appPackage: com.imdb.mobile, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {appActivity: com.imdb.mobile.HomeActivity, appPackage: com.imdb.mobile, automationName: UiAutomator2, deviceName: 3200e957c09dc553, platformName: android}, appium:deviceApiLevel: 30, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone_x86, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x1920, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.625, appium:platformVersion: 11, appium:statBarHeight: 63, appium:takesScreenshot: true, appium:viewportRect: {height: 1731, left: 0, top: 63, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 0fb03953-b5d6-4a26-8f03-9fe0a7656c59]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by AppiumBy.androidUIAutomator: new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().resourceId("com.imdb.mobile:id/your_watchlist_widget").childSelector(new UiSelector().resourceId("com.imdb.mobile:id/recycler_view")).childSelector(new UiSelector().className("android.widget.FrameLayout").instance(0)).childSelector(new UiSelector().resourceId("com.imdb.mobile:id/watchlist_ribbon"))) (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '4.8.3', revision: 'e5e76298c3'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.18'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appium:appActivity: com.imdb.mobile.HomeActivity, appium:appPackage: com.imdb.mobile, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {appActivity: com.imdb.mobile.HomeActivity, appPackage: com.imdb.mobile, automationName: UiAutomator2, deviceName: 3200e957c09dc553, platformName: android}, appium:deviceApiLevel: 30, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone_x86, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x1920, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.625, appium:platformVersion: 11, appium:statBarHeight: 63, appium:takesScreenshot: true, appium:viewportRect: {height: 1731, left: 0, top: 63, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 0fb03953-b5d6-4a26-8f03-9fe0a7656c59
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+at core.AppiumFactory.getElement(AppiumFactory.java:48)
+at core.AppiumFactory.click(AppiumFactory.java:76)
+at screens.ProfileScreen.removeMovieFromWatchlist(ProfileScreen.java:31)
+at specs.AM_0003.am_0004(AM_0003.java:32)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:324)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:74)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:123)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:456)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- am_0004 -->
+        <test-method is-config="true" signature="TearDown()[pri:0, instance:specs.AM_0003@3f4b840d]" started-at="2023-04-07T02:43:21 COT" name="TearDown" finished-at="2023-04-07T02:43:21 COT" duration-ms="473" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+      </class> <!-- specs.AM_0003 -->
+    </test> <!-- TestStory: AM_0003 - ANDROID -->
+    <test started-at="2023-04-07T02:43:21 COT" name="TestStory: AM_0005 - ANDROID" finished-at="2023-04-07T02:44:41 COT" duration-ms="80209">
+      <class name="specs.AM_0005">
+        <test-method is-config="true" signature="SetUp()[pri:0, instance:specs.AM_0005@8d7b252]" started-at="2023-04-07T02:43:21 COT" name="SetUp" finished-at="2023-04-07T02:43:28 COT" duration-ms="6808" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SetUp -->
+        <test-method signature="am_0006()[pri:0, instance:specs.AM_0005@8d7b252]" started-at="2023-04-07T02:43:28 COT" name="am_0006" finished-at="2023-04-07T02:44:41 COT" duration-ms="72955" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- am_0006 -->
+        <test-method is-config="true" signature="TearDown()[pri:0, instance:specs.AM_0005@8d7b252]" started-at="2023-04-07T02:44:41 COT" name="TearDown" finished-at="2023-04-07T02:44:41 COT" duration-ms="442" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+      </class> <!-- specs.AM_0005 -->
+    </test> <!-- TestStory: AM_0005 - ANDROID -->
+  </suite> <!-- regression -->
+</testng-results>
