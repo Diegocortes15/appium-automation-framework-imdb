@@ -1,39 +1,33 @@
 package specs;
 
+import core.ReadJsonData;
 import io.qameta.allure.Description;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;
+import org.json.simple.JSONObject;
 import org.testng.annotations.Test;
-import screens.LoginScreen;
-import screens.MovieScreen;
-import screens.RateMovieScreen;
-import screens.SearchScreen;
 
 public class AM_0005 extends BaseMobileTest {
 
-    private final String storyParent = "am-0001";
+    private final String storyParent = "am_0005";
 
     @Test
     @Story(storyParent)
-    @Description("Search a movie")
+    @Description("📘 Verify movie rating")
     @Severity(SeverityLevel.BLOCKER)
     public void am_0006() {
-        int movieRating = 8;
-        LoginScreen loginScreen = new LoginScreen(driver);
-        SearchScreen searchScreen = new SearchScreen(driver);
-        MovieScreen movieScreen = new MovieScreen(driver);
-        RateMovieScreen rateMovieScreen = new RateMovieScreen(driver);
+        ReadJsonData readDataTestCase = new ReadJsonData("src/test/java/data/" + storyParent + "/am_0006.json");
+        JSONObject dataTestCase = readDataTestCase.getJsonObject();
+        JSONObject data = (JSONObject) dataTestCase.get("data");
 
         loginScreen.singInWithGoogle();
         loginScreen.navigationScreen.goToSearchScreen();
-        searchScreen.searchMovie("Puss in Boots: The Last Wish");
+        searchScreen.searchMovie((String) data.get("movieTitle"));
         movieScreen.clickReviewsSectionEmptyRateButton();
-        rateMovieScreen.setMovieRating(movieRating);
-        movieScreen.verifyUserRating(String.valueOf(movieRating));
-        //movieScreen.verifyMovieDescription("A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.");
+        rateMovieScreen.setMovieRating((String) data.get("movieRating"));
+        movieScreen.verifyUserRating((String) data.get("movieRating"));
         movieScreen.clickReviewsSectionRateButton();
         rateMovieScreen.clickRemoveMovieRating();
-
     }
 }

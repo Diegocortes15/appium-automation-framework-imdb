@@ -1,0 +1,15 @@
+{
+  "testCase": "AM-0002",
+  "testSummary": "Verify movie description",
+  "testDescription": "As a user, I want to verify the description of a movie so that I can know more about it",
+  "tags": [
+    "@regression",
+    "@sprint1",
+    "@am-0001",
+    "@am-0002"
+  ],
+  "data": {
+    "movieTitle": "Interstellar",
+    "description": "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival."
+  }
+}

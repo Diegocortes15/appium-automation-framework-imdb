@@ -1,23 +1,30 @@
-[INFO ] 2023-04-07 15:18:29,560 [main] logger - Not Now Button Element is clicked
-[INFO ] 2023-04-07 15:18:31,009 [main] logger - Button Search Icon Element is clicked
-[INFO ] 2023-04-07 15:18:31,926 [main] logger - Input Search Bar Element is clicked
-[INFO ] 2023-04-07 15:18:33,800 [main] logger - Input Search Bar is entered with Interstellar
-[INFO ] 2023-04-07 15:18:49,062 [main] logger - List Movies Element is clicked
-[INFO ] 2023-04-07 15:18:52,466 [main] logger - ? Getting Movie Description element text
-[INFO ] 2023-04-07 15:18:53,172 [main] logger - PASSED: Movie Description text is displayed as Expected = A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival. ; Actual = A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.
-[INFO ] 2023-04-07 15:19:01,558 [main] logger - Google Log In Element is clicked
-[INFO ] 2023-04-07 15:19:03,196 [main] logger - Button Search Icon Element is clicked
-[INFO ] 2023-04-07 15:19:04,226 [main] logger - Input Search Bar Element is clicked
-[INFO ] 2023-04-07 15:19:05,901 [main] logger - Input Search Bar is entered with Passengers
-[INFO ] 2023-04-07 15:19:34,360 [main] logger - Google Log In Element is clicked
-[INFO ] 2023-04-07 15:19:48,430 [main] logger - Button Search Icon Element is clicked
-[INFO ] 2023-04-07 15:19:49,407 [main] logger - Input Search Bar Element is clicked
-[INFO ] 2023-04-07 15:19:50,994 [main] logger - Input Search Bar is entered with Puss in Boots: The Last Wish
-[INFO ] 2023-04-07 15:20:08,859 [main] logger - List Movies Element is clicked
-[INFO ] 2023-04-07 15:20:29,492 [main] logger - User reviews button Element is clicked
-[INFO ] 2023-04-07 15:20:30,428 [main] logger - Rating movie with 8 Element is clicked
-[INFO ] 2023-04-07 15:20:32,545 [main] logger - Rate movie button Element is clicked
-[INFO ] 2023-04-07 15:20:46,094 [main] logger - ? Getting Personal user rating element text
-[INFO ] 2023-04-07 15:20:46,610 [main] logger - PASSED: Personal user rating text is displayed as Expected = 8 ; Actual = 8
-[INFO ] 2023-04-07 15:20:46,776 [main] logger - User reviews button Element is clicked
-[INFO ] 2023-04-07 15:20:47,608 [main] logger - Remove rating button Element is clicked
+[INFO ] 2023-04-08 23:01:40,760 [main] logger - Not Now Button Element is clicked
+[INFO ] 2023-04-08 23:01:42,018 [main] logger - Button Search Icon Element is clicked
+[INFO ] 2023-04-08 23:01:42,834 [main] logger - Input Search Bar Element is clicked
+[INFO ] 2023-04-08 23:01:45,902 [main] logger - ? Input Search Bar is entered with Interstellar
+[INFO ] 2023-04-08 23:02:02,700 [main] logger - List Movies Element is clicked
+[INFO ] 2023-04-08 23:02:06,639 [main] logger - ? Getting Movie Description element text
+[INFO ] 2023-04-08 23:02:07,228 [main] logger - PASSED: Movie Description text is displayed as Expected = A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival. ; Actual = A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.
+[INFO ] 2023-04-08 23:02:15,148 [main] logger - Google Log In Element is clicked
+[INFO ] 2023-04-08 23:02:49,531 [main] logger - Button Search Icon Element is clicked
+[INFO ] 2023-04-08 23:02:50,447 [main] logger - Input Search Bar Element is clicked
+[INFO ] 2023-04-08 23:02:52,615 [main] logger - ? Input Search Bar is entered with Passengers
+[INFO ] 2023-04-08 23:02:56,681 [main] logger - List Movies Element is clicked
+[INFO ] 2023-04-08 23:02:59,472 [main] logger - ? Getting Movie Title element text
+[INFO ] 2023-04-08 23:03:00,864 [main] logger - Add to Watch List Button Element is clicked
+[INFO ] 2023-04-08 23:03:09,623 [main] logger - Button Profile Icon Element is clicked
+[INFO ] 2023-04-08 23:03:15,587 [main] logger - ? Getting Movie Title In Wish List element text
+[INFO ] 2023-04-08 23:03:16,152 [main] logger - PASSED: Movie Title In Wish List text is displayed as Expected = Passengers ; Actual = Passengers
+[INFO ] 2023-04-08 23:03:20,933 [main] logger - Movie Ribbon In Wish List Element is clicked
+[INFO ] 2023-04-08 23:03:28,598 [main] logger - Google Log In Element is clicked
+[INFO ] 2023-04-08 23:04:03,000 [main] logger - Button Search Icon Element is clicked
+[INFO ] 2023-04-08 23:04:04,033 [main] logger - Input Search Bar Element is clicked
+[INFO ] 2023-04-08 23:04:06,232 [main] logger - ? Input Search Bar is entered with Puss in Boots: The Last Wish
+[INFO ] 2023-04-08 23:04:09,498 [main] logger - List Movies Element is clicked
+[INFO ] 2023-04-08 23:04:27,697 [main] logger - User reviews button Element is clicked
+[INFO ] 2023-04-08 23:04:28,698 [main] logger - Rating movie with 8 Element is clicked
+[INFO ] 2023-04-08 23:04:30,591 [main] logger - Rate movie button Element is clicked
+[INFO ] 2023-04-08 23:04:41,430 [main] logger - ? Getting Personal user rating element text
+[INFO ] 2023-04-08 23:04:42,296 [main] logger - PASSED: Personal user rating text is displayed as Expected = 8 ; Actual = 8
+[INFO ] 2023-04-08 23:04:43,424 [main] logger - User reviews button Element is clicked
+[INFO ] 2023-04-08 23:04:43,498 [main] logger - Remove rating button Element is clicked

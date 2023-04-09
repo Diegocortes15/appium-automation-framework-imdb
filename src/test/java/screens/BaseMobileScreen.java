@@ -15,6 +15,12 @@ public abstract class BaseMobileScreen {
     public BaseMobileScreen(AndroidDriver driver) {
         this.driver = driver;
         PageFactory.initElements(new AppiumFieldDecorator(driver, Duration.ofMillis(FrameworkConfig.ELEMENT_TIMEOUT)), this);
-        this.appiumFactory = new AppiumFactory(driver);
+        this.appiumFactory = AppiumFactory.getInstance(driver);
+    }
+
+    protected void updateDriver(AndroidDriver driver) {
+        this.driver = driver;
+        PageFactory.initElements(new AppiumFieldDecorator(driver, Duration.ofMillis(FrameworkConfig.ELEMENT_TIMEOUT)), this);
+        this.appiumFactory = AppiumFactory.getInstance(driver);
     }
 }

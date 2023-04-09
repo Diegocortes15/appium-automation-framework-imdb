@@ -1,0 +1,14 @@
+{
+  "testCase": "AM-0004",
+  "testSummary": "Verify movie added in watchlist",
+  "testDescription": "Verify that a user can add a movie to their watchlist",
+  "tags": [
+    "@regression",
+    "@sprint1",
+    "@am-0003",
+    "@am-0004"
+  ],
+  "data": {
+    "movieTitle": "Passengers"
+  }
+}

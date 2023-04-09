@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-regression" class="navigator-link">
-              <span class="suite-name border-failed">regression</span>
+              <span class="suite-name border-passed">regression</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,21 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods, 1 failed,   2 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-regression" class="hide-methods failed suite-regression"> (hide)</a> <!-- hide-methods failed suite-regression -->
-                      <a href="#" panel-name="suite-regression" class="show-methods failed suite-regression"> (show)</a> <!-- show-methods failed suite-regression -->
-                    </span>
-                    <div class="method-list-content failed suite-regression">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-regression" title="specs.AM_0003" class="method navigator-link" hash-for-method="am_0004">am_0004</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-regression -->
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -118,6 +104,11 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-regression" title="specs.AM_0001" class="method navigator-link" hash-for-method="am_0002">am_0002</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-regression" title="specs.AM_0003" class="method navigator-link" hash-for-method="am_0004">am_0004</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -137,9 +128,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-regression" class="panel regression">
-          <div class="suite-regression-class-failed">
+          <div class="suite-regression-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
+              <img src="passed.png"/>
               <span class="class-name">specs.AM_0003</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -148,36 +139,6 @@
                   <a name="am_0004">
                   </a> <!-- am_0004 -->
                   <span class="method-name">am_0004</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by AppiumBy.androidUIAutomator: new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().className(&quot;androidx.recyclerview.widget.RecyclerView&quot;).childSelector(new UiSelector().className(&quot;android.widget.LinearLayout&quot;).childSelector(new UiSelector().className(&quot;android.widget.ImageView&quot;).fromParent(new UiSelector().className(&quot;android.widget.LinearLayout&quot;))))) (tried for 20 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.8.3&apos;, revision: &apos;e5e76298c3&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.18&apos;
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {appium:appActivity: com.imdb.mobile.HomeActivity, appium:appPackage: com.imdb.mobile, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {appActivity: com.imdb.mobile.HomeActivity, appPackage: com.imdb.mobile, automationName: UiAutomator2, deviceName: 3200e957c09dc553, platformName: android}, appium:deviceApiLevel: 30, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone_x86, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x1920, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.625, appium:platformVersion: 11, appium:statBarHeight: 63, appium:takesScreenshot: true, appium:viewportRect: {height: 1731, left: 0, top: 63, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: c7f2a404-b407-4a1d-8f13-81b47fa26bee
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
-	at core.AppiumFactory.getElement(AppiumFactory.java:48)
-	at core.AppiumFactory.click(AppiumFactory.java:76)
-	at screens.SearchScreen.searchMovie(SearchScreen.java:26)
-	at specs.AM_0003.am_0004(AM_0003.java:27)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-... Removed 31 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-regression-class-failed -->
-          <div class="suite-regression-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">specs.AM_0001</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="am_0002">
-                  </a> <!-- am_0002 -->
-                  <span class="method-name">am_0002</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -193,6 +154,21 @@ Session ID: c7f2a404-b407-4a1d-8f13-81b47fa26bee
                   <a name="am_0006">
                   </a> <!-- am_0006 -->
                   <span class="method-name">am_0006</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-regression-class-passed -->
+          <div class="suite-regression-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">specs.AM_0001</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="am_0002">
+                  </a> <!-- am_0002 -->
+                  <span class="method-name">am_0002</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -269,15 +245,15 @@ data.addRows(3);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'am_0006')
 data.setCell(0, 2, 'specs.AM_0005')
-data.setCell(0, 3, 74104);
+data.setCell(0, 3, 75567);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'am_0004')
 data.setCell(1, 2, 'specs.AM_0003')
-data.setCell(1, 3, 25375);
+data.setCell(1, 3, 66378);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'am_0002')
 data.setCell(2, 2, 'specs.AM_0001')
-data.setCell(2, 3, 23956);
+data.setCell(2, 3, 26802);
 window.suiteTableData['regression']= { tableData: data, tableDiv: 'times-div-regression'}
 return data;
 }
@@ -309,50 +285,48 @@ return data;
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
               <div class="chronological-class-name">specs.AM_0001</div> <!-- chronological-class-name -->
-              <div class="configuration-method before">
+              <div class="configuration-test before">
                 <span class="method-name">SetUp</span>
                 <span class="method-start">0 ms</span>
-              </div> <!-- configuration-method before -->
+              </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">am_0002</span>
-                <span class="method-start">19700 ms</span>
+                <span class="method-start">8977 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
+              <div class="configuration-test after">
                 <span class="method-name">TearDown</span>
-                <span class="method-start">43672 ms</span>
-              </div> <!-- configuration-method after -->
+                <span class="method-start">35923 ms</span>
+              </div> <!-- configuration-test after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">specs.AM_0003</div> <!-- chronological-class-name -->
-              <div class="configuration-method before">
+              <div class="configuration-test before">
                 <span class="method-name">SetUp</span>
-                <span class="method-start">44188 ms</span>
-              </div> <!-- configuration-method before -->
+                <span class="method-start">36358 ms</span>
+              </div> <!-- configuration-test before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">am_0004</span>
-                <span class="method-start">51108 ms</span>
+                <span class="method-start">43103 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
+              <div class="configuration-test after">
                 <span class="method-name">TearDown</span>
-                <span class="method-start">76496 ms</span>
-              </div> <!-- configuration-method after -->
+                <span class="method-start">109486 ms</span>
+              </div> <!-- configuration-test after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">specs.AM_0005</div> <!-- chronological-class-name -->
-              <div class="configuration-method before">
+              <div class="configuration-test before">
                 <span class="method-name">SetUp</span>
-                <span class="method-start">76996 ms</span>
-              </div> <!-- configuration-method before -->
+                <span class="method-start">109839 ms</span>
+              </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">am_0006</span>
-                <span class="method-start">83983 ms</span>
+                <span class="method-start">116478 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
+              <div class="configuration-test after">
                 <span class="method-name">TearDown</span>
-                <span class="method-start">158089 ms</span>
-              </div> <!-- configuration-method after -->
+                <span class="method-start">192047 ms</span>
+              </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

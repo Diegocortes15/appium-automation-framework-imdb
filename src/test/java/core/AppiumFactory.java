@@ -15,56 +15,66 @@ import java.io.ByteArrayInputStream;
 import java.time.Duration;
 
 public class AppiumFactory {
-    public AndroidDriver driver;
-    public WebDriverWait wait;
+    private static AppiumFactory instance = null;
+    private AndroidDriver driver;
+    private WebDriverWait wait;
 
-    public AppiumFactory(AndroidDriver driver) {
+    private AppiumFactory(AndroidDriver driver) {
         this.driver = driver;
-        this.wait = new WebDriverWait(this.driver, Duration.ofMillis(FrameworkConfig.ELEMENT_TIMEOUT));
+        this.wait = new WebDriverWait(driver, Duration.ofMillis(FrameworkConfig.ELEMENT_TIMEOUT));
+    }
+
+    public static AppiumFactory getInstance(AndroidDriver driver) {
+        if (instance == null) {
+            instance = new AppiumFactory(driver);
+        } else {
+            instance.updateDriver(driver);
+        }
+        return instance;
+    }
+
+    protected void updateDriver(AndroidDriver driver) {
+        this.driver = driver;
+        this.wait = new WebDriverWait(driver, Duration.ofMillis(FrameworkConfig.ELEMENT_TIMEOUT));
     }
 
     public WebElement getElement(MobileElement mobileElement) {
+        return waitUntilVisibleElement(mobileElement);
+    }
 
-        if (!mobileElement.scroll) {
+    public WebElement waitUntilVisibleElement(MobileElement mobileElement) {
+        try {
+            if (!mobileElement.scroll) {
+                switch (mobileElement.By) {
+                    case ID:
+                        return this.wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(mobileElement.selector)));
+                    case CLASSNAME:
+                        return this.wait.until(ExpectedConditions.visibilityOfElementLocated(By.className(mobileElement.selector)));
+                    case XPATH:
+                        return this.wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(mobileElement.selector)));
+                    case UIAUTOMATOR:
+                        return this.wait.until(ExpectedConditions.visibilityOfElementLocated(new AppiumBy.ByAndroidUIAutomator(mobileElement.selector)));
+                }
+            }
             switch (mobileElement.By) {
                 case ID:
-                    return this.wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(mobileElement.selector)));
+                    return wait.until(ExpectedConditions.visibilityOfElementLocated(new AppiumBy.ByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().resourceId(\"" + mobileElement.selector + "\").instance(0))")));
                 case CLASSNAME:
-                    return this.wait.until(ExpectedConditions.visibilityOfElementLocated(By.className(mobileElement.selector)));
+                    return wait.until(ExpectedConditions.visibilityOfElementLocated(new AppiumBy.ByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().className(\"" + mobileElement.selector + "\").instance(0))")));
                 case XPATH:
-                    return this.wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(mobileElement.selector)));
+                    return wait.until(ExpectedConditions.visibilityOfElementLocated(new AppiumBy.ByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().xpath(\"" + mobileElement.selector + "\").instance(0))")));
                 case UIAUTOMATOR:
-                    return this.wait.until(ExpectedConditions.visibilityOfElementLocated(new AppiumBy.ByAndroidUIAutomator(mobileElement.selector)));
+                    return wait.until(ExpectedConditions.visibilityOfElementLocated(new AppiumBy.ByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(" + mobileElement.selector + ")")));
             }
-        }
-        switch (mobileElement.By) {
-            case ID:
-                return wait.until(ExpectedConditions.visibilityOfElementLocated(new AppiumBy.ByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().resourceId(\"" + mobileElement.selector + "\").instance(0))")));
-            case CLASSNAME:
-                return wait.until(ExpectedConditions.visibilityOfElementLocated(new AppiumBy.ByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().className(\"" + mobileElement.selector + "\").instance(0))")));
-            case XPATH:
-                return wait.until(ExpectedConditions.visibilityOfElementLocated(new AppiumBy.ByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().xpath(\"" + mobileElement.selector + "\").instance(0))")));
-            case UIAUTOMATOR:
-                return wait.until(ExpectedConditions.visibilityOfElementLocated(new AppiumBy.ByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(" + mobileElement.selector + ")")));
+        } catch (TimeoutException e) {
+            throw new TimeoutException("Expected condition failed: waiting for visibility of element \"" + mobileElement.description + "\".\n" + e.getMessage());
         }
         return null;
     }
 
-    public void waitElementUntil(MobileElement mobileElement, WaitType type) {
-        WebElement element = getElement(mobileElement);
-        switch (type) {
-            case VISIBLE:
-                wait.until(ExpectedConditions.visibilityOf(element));
-                break;
-            case CLICKABLE:
-                wait.until(ExpectedConditions.elementToBeClickable(element));
-                break;
-        }
-    }
-
-    public void scrollTo(MobileElement mobileElement) {
+    /*public void scrollTo(MobileElement mobileElement) {
         getElement(mobileElement);
-    }
+    }*/
 
     @Step("📸 {0} - 📸 Full screen screenshot")
     public void embedFullScreenScreenshot(String description) {
@@ -87,9 +97,10 @@ public class AppiumFactory {
         WebElement element = getElement(mobileElement);
         try {
             click(mobileElement);
+            element.clear();
             element.sendKeys(strValue);
             driver.pressKey(new KeyEvent(AndroidKey.ENTER));
-            LoggerLoad.info(mobileElement.description + " is entered with " + strValue);
+            LoggerLoad.info("⏩ " + mobileElement.description + " is entered with " + strValue);
         } catch (StaleElementReferenceException e) {
             this.sendKeys(mobileElement, strValue);
         }

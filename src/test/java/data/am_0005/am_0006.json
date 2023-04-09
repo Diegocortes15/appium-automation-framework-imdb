@@ -1,0 +1,15 @@
+{
+  "testCase": "AM-0006",
+  "testSummary": "Verify movie rating",
+  "testDescription": "Verify that a user can rate a movie and see the rating reflected on the movie details screen",
+  "tags": [
+    "@regression",
+    "@sprint1",
+    "@am-0005",
+    "@am-0006"
+  ],
+  "data": {
+    "movieTitle": "Puss in Boots: The Last Wish",
+    "movieRating": "8"
+  }
+}

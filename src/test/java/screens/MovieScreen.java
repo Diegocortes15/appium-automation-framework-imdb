@@ -7,8 +7,9 @@ import io.qameta.allure.Step;
 import screens.components.NavigationScreen;
 
 public class MovieScreen extends BaseMobileScreen {
-
+    private static MovieScreen instance = null;
     public final NavigationScreen navigationScreen;
+
     private final MobileElement movieDescription = new MobileElement(ElementBy.ID, "com.imdb.mobile:id/plot_overview", "Movie Description");
     private final MobileElement movieTitle = new MobileElement(ElementBy.ID, "com.imdb.mobile:id/title", "Movie Title");
     private final MobileElement addToWatchListButton = new MobileElement(ElementBy.ID, "com.imdb.mobile:id/state_off", "Add to Watch List Button");
@@ -16,9 +17,18 @@ public class MovieScreen extends BaseMobileScreen {
     private final MobileElement reviewsSectionEmptyRateButton = new MobileElement(ElementBy.UIAUTOMATOR, "new UiSelector().resourceId(\"com.imdb.mobile:id/title_user_reviews\").childSelector(new UiSelector().resourceId(\"com.imdb.mobile:id/empty_user_rating\"))", "User reviews button");
     private final MobileElement reviewsSectionRateButton = new MobileElement(ElementBy.UIAUTOMATOR, "new UiSelector().resourceId(\"com.imdb.mobile:id/title_user_reviews\").childSelector(new UiSelector().resourceId(\"com.imdb.mobile:id/user_rating\"))", "User reviews button");
 
-    public MovieScreen(AndroidDriver driver) {
+    private MovieScreen(AndroidDriver driver) {
         super(driver);
-        navigationScreen = new NavigationScreen(driver);
+        navigationScreen = NavigationScreen.getInstance(driver);
+    }
+
+    public static MovieScreen getInstance(AndroidDriver driver) {
+        if (instance == null) {
+            instance = new MovieScreen(driver);
+        } else {
+            instance.updateDriver(driver);
+        }
+        return instance;
     }
 
     @Step("🧪 Verify movie description: \"{0}\"")
@@ -26,22 +36,22 @@ public class MovieScreen extends BaseMobileScreen {
         appiumFactory.verifyText(movieDescription, strExpectedMovieDescription);
     }
 
-    @Step("Get movie title")
+    @Step("🐾 Get movie title")
     public String getMovieTitle() {
         return appiumFactory.getText(movieTitle);
     }
 
-    @Step("Add movie to watchlist")
+    @Step("🐾 Add movie to watchlist")
     public void addToWatchList() {
         appiumFactory.click(addToWatchListButton);
     }
 
-    @Step("Click on empty rate button")
+    @Step("🐾 Click on empty rate button")
     public void clickReviewsSectionEmptyRateButton() {
         appiumFactory.click(reviewsSectionEmptyRateButton);
     }
 
-    @Step("Click on rate button")
+    @Step("🐾 Click on rate button")
     public void clickReviewsSectionRateButton() {
         appiumFactory.click(reviewsSectionRateButton);
     }
