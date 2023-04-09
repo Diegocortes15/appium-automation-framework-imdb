@@ -1,1 +1,0 @@
-✅ Located elementBy By.chained({AppiumBy.id: com.imdb.mobile:id/plot_overview}) text is displayed as Expected = A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival. ; Actual = A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.

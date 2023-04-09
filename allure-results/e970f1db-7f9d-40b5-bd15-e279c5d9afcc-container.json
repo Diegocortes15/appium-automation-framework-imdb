@@ -1,1 +1,0 @@
-{"uuid":"e970f1db-7f9d-40b5-bd15-e279c5d9afcc","name":"specs.BaseMobileTest.SetUp","children":["d71dd5e1-5d7b-4afc-87a9-0773461f376a"],"description":"","befores":[{"name":"SetUp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1680228500798,"stop":1680228513970}],"afters":[],"start":1680228500797,"stop":1680228513970}
