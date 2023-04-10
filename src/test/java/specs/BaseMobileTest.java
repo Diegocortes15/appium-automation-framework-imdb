@@ -6,9 +6,13 @@ import io.appium.java_client.android.AndroidDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import screens.*;
+import screens.modals.RateMoreLikeThisModal;
+import screens.modals.TurnOnNotificationsModal;
 
 public abstract class BaseMobileTest {
     protected AndroidDriver driver;
+    protected TurnOnNotificationsModal turnOnNotificationsModal;
+    protected RateMoreLikeThisModal rateMoreLikeThisModal;
     protected LoginScreen loginScreen;
     protected SearchScreen searchScreen;
     protected MovieScreen movieScreen;
@@ -19,6 +23,8 @@ public abstract class BaseMobileTest {
     public void SetUp() {
         if (driver == null) {
             this.driver = MobileAppDriver.getMoviesAppDriver(ConfigCapabilities.getCapabilities());
+            rateMoreLikeThisModal = RateMoreLikeThisModal.getInstance(driver);
+            turnOnNotificationsModal = TurnOnNotificationsModal.getInstance(driver);
             loginScreen = LoginScreen.getInstance(driver);
             searchScreen = SearchScreen.getInstance(driver);
             movieScreen = MovieScreen.getInstance(driver);

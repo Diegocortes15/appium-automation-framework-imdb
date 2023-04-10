@@ -9,21 +9,21 @@ import screens.BaseMobileScreen;
 
 import java.time.Duration;
 
-public class NavigationScreen extends BaseMobileScreen {
-    private static NavigationScreen instance = null;
+public class NavigationComponent extends BaseMobileScreen {
+    private static NavigationComponent instance = null;
 
     protected MobileElement buttonHomeIcon = new MobileElement(ElementBy.ID, "com.imdb.mobile:id/navigation_home", "Button Home Icon", false);
     protected MobileElement buttonSearchIcon = new MobileElement(ElementBy.ID, "com.imdb.mobile:id/navigation_search_browse", "Button Search Icon", false);
     protected MobileElement buttonVideoIcon = new MobileElement(ElementBy.ID, "com.imdb.mobile:id/navigation_video", "Button Video Icon", false);
     protected MobileElement buttonProfileIcon = new MobileElement(ElementBy.ID, "com.imdb.mobile:id/navigation_you", "Button Profile Icon", false);
 
-    private NavigationScreen(AndroidDriver driver) {
+    private NavigationComponent(AndroidDriver driver) {
         super(driver);
     }
 
-    public static NavigationScreen getInstance(AndroidDriver driver) {
+    public static NavigationComponent getInstance(AndroidDriver driver) {
         if (instance == null) {
-            instance = new NavigationScreen(driver);
+            instance = new NavigationComponent(driver);
         }
         return instance;
     }

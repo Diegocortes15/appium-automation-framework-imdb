@@ -4,11 +4,11 @@ import core.ElementBy;
 import core.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.qameta.allure.Step;
-import screens.components.NavigationScreen;
+import screens.components.NavigationComponent;
 
 public class MovieScreen extends BaseMobileScreen {
     private static MovieScreen instance = null;
-    public final NavigationScreen navigationScreen;
+    public final NavigationComponent navigationComponent;
 
     private final MobileElement movieDescription = new MobileElement(ElementBy.ID, "com.imdb.mobile:id/plot_overview", "Movie Description");
     private final MobileElement movieTitle = new MobileElement(ElementBy.ID, "com.imdb.mobile:id/title", "Movie Title");
@@ -19,7 +19,7 @@ public class MovieScreen extends BaseMobileScreen {
 
     private MovieScreen(AndroidDriver driver) {
         super(driver);
-        navigationScreen = NavigationScreen.getInstance(driver);
+        navigationComponent = NavigationComponent.getInstance(driver);
     }
 
     public static MovieScreen getInstance(AndroidDriver driver) {

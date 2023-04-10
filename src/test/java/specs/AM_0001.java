@@ -22,7 +22,7 @@ public class AM_0001 extends BaseMobileTest {
         JSONObject data = (JSONObject) dataTestCase.get("data");
 
         loginScreen.skipSignIn();
-        loginScreen.navigationScreen.goToSearchScreen();
+        loginScreen.navigationComponent.goToSearchScreen();
         searchScreen.searchMovie((String) data.get("movieTitle"));
         movieScreen.verifyMovieDescription((String) data.get("description"));
     }

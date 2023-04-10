@@ -4,11 +4,11 @@ import core.ElementBy;
 import core.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.qameta.allure.Step;
-import screens.components.NavigationScreen;
+import screens.components.NavigationComponent;
 
 public class LoginScreen extends BaseMobileScreen {
     private static LoginScreen instance = null;
-    public final NavigationScreen navigationScreen;
+    public final NavigationComponent navigationComponent;
     private final HomeScreen homeScreen;
     private final MobileElement buttonNotNow = new MobileElement(ElementBy.ID, "com.imdb.mobile:id/splash_not_now", "Not Now Button");
     private final MobileElement buttonLogInWithGoogle = new MobileElement(ElementBy.ID, "com.imdb.mobile:id/google_oauth", "Google Log In");
@@ -16,7 +16,7 @@ public class LoginScreen extends BaseMobileScreen {
 
     private LoginScreen(AndroidDriver driver) {
         super(driver);
-        navigationScreen = NavigationScreen.getInstance(driver);
+        navigationComponent = NavigationComponent.getInstance(driver);
         homeScreen = HomeScreen.getInstance(driver);
     }
 

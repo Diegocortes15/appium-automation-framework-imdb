@@ -22,11 +22,12 @@ public class AM_0003 extends BaseMobileTest {
         JSONObject data = (JSONObject) dataTestCase.get("data");
 
         loginScreen.singInWithGoogle();
-        loginScreen.navigationScreen.goToSearchScreen();
+        loginScreen.navigationComponent.goToSearchScreen();
         searchScreen.searchMovie((String) data.get("movieTitle"));
         String movieTitle = movieScreen.getMovieTitle();
         movieScreen.addToWatchList();
-        movieScreen.navigationScreen.goToProfileScreen();
+        turnOnNotificationsModal.clickButtonNotNow();
+        movieScreen.navigationComponent.goToProfileScreen();
         profileScreen.verifyMovieTitleInWatchlist(movieTitle);
         profileScreen.removeMovieFromWatchlist();
     }

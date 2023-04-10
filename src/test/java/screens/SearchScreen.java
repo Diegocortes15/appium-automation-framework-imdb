@@ -4,18 +4,18 @@ import core.ElementBy;
 import core.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.qameta.allure.Step;
-import screens.components.NavigationScreen;
+import screens.components.NavigationComponent;
 
 public class SearchScreen extends BaseMobileScreen {
     private static SearchScreen instance = null;
-    public final NavigationScreen navigationScreen;
+    public final NavigationComponent navigationComponent;
 
     private final MobileElement firstMovie = new MobileElement(ElementBy.UIAUTOMATOR, "new UiSelector().className(\"androidx.recyclerview.widget.RecyclerView\").childSelector(new UiSelector().className(\"android.widget.LinearLayout\").childSelector(new UiSelector().className(\"android.widget.ImageView\").fromParent(new UiSelector().className(\"android.widget.LinearLayout\"))))", "List Movies", false);
     private final MobileElement inputSearchBar = new MobileElement(ElementBy.CLASSNAME, "android.widget.EditText", "Input Search Bar");
 
     private SearchScreen(AndroidDriver driver) {
         super(driver);
-        navigationScreen = NavigationScreen.getInstance(driver);
+        navigationComponent = NavigationComponent.getInstance(driver);
     }
 
     public static SearchScreen getInstance(AndroidDriver driver) {
