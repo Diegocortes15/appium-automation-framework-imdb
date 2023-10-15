@@ -6,6 +6,17 @@
 
 1. Install Appium: Go to [official Appium website](https://appium.io/) and download and install the latest version for
    your operating system.
+
+   ```
+   npm i --location=global appium
+   ```   
+   
+   you must install `UiAutomator2 Driver` which is a test automation framework for Android devices.
+
+   ```
+   appium driver install uiautomator2
+   ```
+
 2. Next, install Appium Inspector v2 by following the instructions on
    the [Appium inspector repository](https://github.com/appium/appium-inspector/releases). Appium Inspector v2 is a
    desktop application that allows you to inspect the UI of your app and automate actions on it.
@@ -108,7 +119,7 @@ git clone https://github.com/Diegocortes15/appium-automation-framework-imdb.git
 ### Install the IMDb App
 
 1. Open the Google Play Store app on your Android device.
-2. In the search bar, type `iMDB` and press enter.
+2. In the search bar, type `IMDb` and press enter.
 3. Look for the iMDB app in the search results.
 4. Tap on the iMDB app to open its details page.
 5. On the iMDB app details page, tap the `Install` button.
@@ -117,13 +128,11 @@ git clone https://github.com/Diegocortes15/appium-automation-framework-imdb.git
 
 ### Start Appium Server
 
-| Host    | Port |
-|---------|------|
-| 0.0.0.0 | 4723 |
+To start Appium server you should run the following command in your terminal
 
-Start Appium server click in `startServer` button.
-
-![image](https://user-images.githubusercontent.com/60171460/231737981-5f6ce2a1-e148-438e-8ef8-ffba6bcb2345.png)
+```
+appium
+```
 
 ### Verify Device to Run the Tests
 
@@ -141,10 +150,11 @@ adb devices
 
 ```
 {
-  "deviceName": "",
+  "deviceName": "emulator-5554",
   "appPackage": "com.imdb.mobile",
   "appActivity": "com.imdb.mobile.HomeActivity",
-  "platformName": "Android"
+  "platformName": "Android",
+  "automationName": "UiAutomator2"
 }
 ```
 

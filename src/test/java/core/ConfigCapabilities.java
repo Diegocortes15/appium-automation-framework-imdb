@@ -13,7 +13,7 @@ public class ConfigCapabilities {
         ConfigCapabilities.capabilities.setCapability("appActivity", readConfigCapabilities.getJsonDataProperty("appActivity"));
         ConfigCapabilities.capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, readConfigCapabilities.getJsonDataProperty("deviceName"));
         ConfigCapabilities.capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, readConfigCapabilities.getJsonDataProperty("platformName"));
-        ConfigCapabilities.capabilities.setCapability("automationName", "UiAutomator2");
+        ConfigCapabilities.capabilities.setCapability("automationName", readConfigCapabilities.getJsonDataProperty("automationName"));
     }
 
     public static DesiredCapabilities getCapabilities() {

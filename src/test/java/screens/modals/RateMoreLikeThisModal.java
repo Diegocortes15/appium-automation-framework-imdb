@@ -25,6 +25,8 @@ public class RateMoreLikeThisModal extends BaseMobileScreen {
 
     @Step("🐾 Click on Not Now Button")
     public void clickButtonClose() {
-        appiumFactory.click(buttonClose);
+        if (appiumFactory.isElementPresent(buttonClose)) {
+            appiumFactory.click(buttonClose);
+        }
     }
 }

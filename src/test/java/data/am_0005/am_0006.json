@@ -9,6 +9,8 @@
     "@am-0006"
   ],
   "data": {
+    "email": "ENV_IMDB_EMAIL",
+    "password": "ENV_IMDB_PASSWORD",
     "movieTitle": "Puss in Boots: The Last Wish",
     "movieRating": "8"
   }

@@ -128,7 +128,6 @@ public class AppiumFactory {
         Assert.assertTrue(actualValue.contains(strExpectedValue));
     }
 
-
     @Step("🧪 Verifying if \"{0.description}\" text (\"{1}\") is displayed as expected {1}")
     public void verifyDisplayed(MobileElement mobileElement) {
         WebElement element = getElement(mobileElement);
@@ -143,5 +142,28 @@ public class AppiumFactory {
             LoggerLoad.error("FAILED: " + mobileElement.description + " is NOT displayed as Expected");
         }
         Assert.assertTrue(element.isDisplayed());
+    }
+
+    public boolean isElementPresent(MobileElement mobileElement) {
+         WebDriverWait innerWait = new WebDriverWait(driver, Duration.ofMillis(FrameworkConfig.EXIST_ELEMENT_TIMEOUT));
+        innerWait.ignoring(TimeoutException.class);
+        innerWait.ignoring(WebDriverException.class);
+        try {
+            return innerWait.until(innerDriver -> {
+                switch (mobileElement.By) {
+                    case ID:
+                        return !innerDriver.findElements(By.id(mobileElement.selector)).isEmpty();
+                    case CLASSNAME:
+                        return !innerDriver.findElements(By.className(mobileElement.selector)).isEmpty();
+                    case XPATH:
+                        return !innerDriver.findElements(By.xpath(mobileElement.selector)).isEmpty();
+                    case UIAUTOMATOR:
+                        return !innerDriver.findElements(new AppiumBy.ByAndroidUIAutomator(mobileElement.selector)).isEmpty();
+                }
+                return false;
+            });
+        } catch (Exception e) {
+            return false;
+        }
     }
 }

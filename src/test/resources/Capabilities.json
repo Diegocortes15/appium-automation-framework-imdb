@@ -2,5 +2,6 @@
   "deviceName": "emulator-5554",
   "appPackage": "com.imdb.mobile",
   "appActivity": "com.imdb.mobile.HomeActivity",
-  "platformName": "Android"
+  "platformName": "Android",
+  "automationName": "UiAutomator2"
 }
