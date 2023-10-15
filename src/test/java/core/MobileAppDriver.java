@@ -12,7 +12,7 @@ public class MobileAppDriver {
     public static AndroidDriver getMoviesAppDriver(DesiredCapabilities capabilities) {
         if (driver == null || driver.getSessionId() == null) {
             try {
-                driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+                driver = new AndroidDriver(new URL("http://127.0.0.1:4723"), capabilities);
             } catch (MalformedURLException e) {
                 e.printStackTrace();
             }

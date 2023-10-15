@@ -40,7 +40,7 @@ public class LoginScreen extends BaseMobileScreen {
         homeScreen.waitVisibleVideoHeroView();
     }
 
-    @Step("🐾 SignIn with Google")
+    @Step("🐾 SignIn with IMDB")
     public void singInWithIMDB() {
         appiumFactory.click(buttonLogInWithIMDB);
     }

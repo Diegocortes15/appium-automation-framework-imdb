@@ -9,10 +9,9 @@ import screens.components.NavigationComponent;
 public class MovieScreen extends BaseMobileScreen {
     private static MovieScreen instance = null;
     public final NavigationComponent navigationComponent;
-
     private final MobileElement movieDescription = new MobileElement(ElementBy.ID, "com.imdb.mobile:id/plot_overview", "Movie Description");
     private final MobileElement movieTitle = new MobileElement(ElementBy.ID, "com.imdb.mobile:id/title", "Movie Title");
-    private final MobileElement addToWatchListButton = new MobileElement(ElementBy.ID, "com.imdb.mobile:id/state_off", "Add to Watch List Button");
+    private final MobileElement buttonAddToWatchList = new MobileElement(ElementBy.ID, "com.imdb.mobile:id/watchlist_button", "Add to Watch List Button");
     private final MobileElement personalUserRating = new MobileElement(ElementBy.UIAUTOMATOR, "new UiSelector().resourceId(\"com.imdb.mobile:id/user_rating\").childSelector(new UiSelector().resourceId(\"com.imdb.mobile:id/rating_text\"))", "Personal user rating");
     private final MobileElement reviewsSectionEmptyRateButton = new MobileElement(ElementBy.UIAUTOMATOR, "new UiSelector().resourceId(\"com.imdb.mobile:id/title_user_reviews\").childSelector(new UiSelector().resourceId(\"com.imdb.mobile:id/empty_user_rating\"))", "User reviews button");
     private final MobileElement reviewsSectionRateButton = new MobileElement(ElementBy.UIAUTOMATOR, "new UiSelector().resourceId(\"com.imdb.mobile:id/title_user_reviews\").childSelector(new UiSelector().resourceId(\"com.imdb.mobile:id/user_rating\"))", "User reviews button");
@@ -43,7 +42,7 @@ public class MovieScreen extends BaseMobileScreen {
 
     @Step("🐾 Add movie to watchlist")
     public void addToWatchList() {
-        appiumFactory.click(addToWatchListButton);
+        appiumFactory.click(buttonAddToWatchList);
     }
 
     @Step("🐾 Click on empty rate button")

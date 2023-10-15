@@ -20,8 +20,10 @@ public class AM_0001 extends BaseMobileTest {
         ReadJsonData readDataTestCase = new ReadJsonData("src/test/java/data/" + storyParent + "/am_0002.json");
         JSONObject dataTestCase = readDataTestCase.getJsonObject();
         JSONObject data = (JSONObject) dataTestCase.get("data");
-
+        welcomeScreen.clickContinueButton();
+        preferredServicesScreen.clickSkipButton();
         loginScreen.skipSignIn();
+        preferredServicesScreen.clickSkipButton();
         loginScreen.navigationComponent.goToSearchScreen();
         searchScreen.searchMovie((String) data.get("movieTitle"));
         movieScreen.verifyMovieDescription((String) data.get("description"));
